@@ -478,13 +478,13 @@ textarea {
 /* ? Start Footer Styling */
 footer {
   margin-top: 20px;
-  height: 20%;
+  height: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-  padding-top: 16px;
+  padding: 16px;
 }
 
 footer .section-title {
@@ -494,6 +494,11 @@ footer .section-title {
 
 footer h3 {
   color: white;
+}
+
+footer p {
+  color: white;
+  font-weight: 300;
 }
 .social-links {
   width: 70%;
@@ -508,7 +513,7 @@ footer h3 {
 }
 
 .social-links img {
-  width: 40%;
+  width: 30%;
 }
 /* ? Keyframe Animations */
 @keyframes show-text {
@@ -532,5 +537,70 @@ footer h3 {
   100% {
     color: var(--primary-theme-color);
     font-weight: 700;
+  }
+}
+
+/* # Media Query for Tablets */
+@media only screen and (min-width: 768px) {
+  #hero h1 {
+    font-size: 4rem;
+  }
+
+  .portfolio-button {
+    font-size: 2.2rem;
+    letter-spacing: 0.2rem;
+  }
+
+  .section-title {
+    font-size: 5rem;
+  }
+
+  .project-description {
+    font-size: 18px;
+    line-height: 3.5rem;
+  }
+
+  .project-languages {
+    font-size: 18px;
+  }
+
+  .project-title {
+    font-size: 24px;
+  }
+
+  .project-item {
+    height: 320px;
+  }
+
+  .project-image {
+    height: 320px;
+  }
+  .project-item .project-info {
+    height: 320px;
+    justify-content: space-around;
+  }
+
+  .barber-item {
+    flex-direction: row;
+  }
+
+  .todo-item {
+    flex-direction: row-reverse;
+  }
+
+  .sov-item {
+    flex-direction: row;
+  }
+
+  .pm-item {
+    flex-direction: row-reverse;
+  }
+
+  .commission-item {
+    flex-direction: row;
+  }
+
+  .flooding-item {
+    flex-direction: row;
   }
 }

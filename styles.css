@@ -24,6 +24,10 @@ img {
   object-fit: cover;
 }
 
+input {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+}
 p {
   font-size: 1.4rem;
   margin-top: 5px;
@@ -141,6 +145,7 @@ p {
   background-color: transparent;
   border: 2px solid var(--primary-theme-color);
   transition: 0.3s all ease;
+  cursor: pointer;
 }
 
 .portfolio-button:hover {
@@ -271,11 +276,12 @@ label[for='input-color-picker'] {
   width: 100%;
   overflow: hidden;
   border-radius: 10px;
-  gap: 10px;
+  /* gap: 10px; */
 }
 
 .project-info {
   padding: 20px;
+  flex-basis: 50%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -301,15 +307,208 @@ label[for='input-color-picker'] {
 }
 
 .project-image {
-  height: 325px;
+  flex-basis: 50%;
+  height: 300px;
   overflow: hidden;
 }
 
 .project-image img {
   transition: transform 0.3s ease;
+  width: 100%;
 }
 .project-image:hover img {
   transform: scale(1.1);
+}
+
+/* ? About Section Styling */
+.about {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 100px 20px;
+}
+.col-left {
+  width: 250px;
+  height: 360px;
+}
+
+.col-right {
+  width: 100%;
+}
+
+.col-right h2 {
+  letter-spacing: 0.5rem;
+  margin-bottom: 10px;
+}
+.about-img {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.about-img::after {
+  content: '';
+  position: absolute;
+  left: -30px;
+  top: 20px;
+  height: 98%;
+  width: 98%;
+  border: 5px solid var(--primary-theme-color);
+  z-index: -1;
+}
+.about-img img {
+  width: 100%;
+  border: 7px solid white;
+}
+
+/* ? Contact Me Section Styling */
+#contact {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+form {
+  flex-basis: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+form input {
+  width: 90%;
+  height: 4rem;
+  padding: 1rem;
+}
+textarea {
+  height: 35%;
+  width: 90%;
+  padding: 1rem;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.subscribe {
+  width: 90%;
+  margin: 10px;
+}
+.subscribe-yes {
+  width: 40%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#yes {
+  width: 16px;
+}
+.subscribe-no {
+  width: 40%;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#no {
+  width: 16px;
+}
+
+.subscribe-inputs {
+  width: 60%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+/* ? Start Contact Information Styling */
+.contact-information {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contact-items {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.contact-item {
+  display: flex;
+  width: 50%;
+  height: 130px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 3px 1px 14px 2px rgba(166, 166, 166, 0.78);
+  box-shadow: 3px 1px 14px 2px rgba(166, 166, 166, 0.78);
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.contact-item:hover {
+  transform: scale(1.1);
+}
+
+.contact-icon {
+  width: 15%;
+  margin-bottom: 10px;
+}
+
+.contact-icon img {
+  width: 100%;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 1.5;
+}
+
+/* ? Start Footer Styling */
+footer {
+  margin-top: 20px;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+  padding-top: 16px;
+}
+
+footer .section-title {
+  color: white;
+  font-size: 28px;
+}
+
+footer h3 {
+  color: white;
+}
+.social-links {
+  width: 70%;
+  margin: 0 auto;
+  height: 60%;
+  display: flex;
+  align-items: center;
+}
+
+.social-links a {
+  text-align: center;
+}
+
+.social-links img {
+  width: 40%;
 }
 /* ? Keyframe Animations */
 @keyframes show-text {

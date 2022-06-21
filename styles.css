@@ -401,6 +401,7 @@ textarea {
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: center;
 }
 
 #yes {
@@ -411,6 +412,7 @@ textarea {
   display: flex;
   gap: 10px;
   align-items: center;
+  justify-content: center;
 }
 
 #no {
@@ -516,6 +518,11 @@ footer p {
   width: 30%;
 }
 /* ? Keyframe Animations */
+/* .animate {
+  animation: show-text 1s ease;
+  animation: reveal-text 0.5s ease forwards;
+  animation: reveal-name 0.5s ease forwards;
+} */
 @keyframes show-text {
   50% {
     width: 100%;
@@ -542,10 +549,12 @@ footer p {
 
 /* # Media Query for Tablets */
 @media only screen and (min-width: 768px) {
+  /* ? Hero Section Styling */
   #hero h1 {
     font-size: 4rem;
   }
 
+  /* ? Global Styles */
   .portfolio-button {
     font-size: 2.2rem;
     letter-spacing: 0.2rem;
@@ -555,52 +564,88 @@ footer p {
     font-size: 5rem;
   }
 
-  .project-description {
-    font-size: 18px;
-    line-height: 3.5rem;
+  /* ? Project Section Styling */
+  .all-projects {
+    gap: 0;
+  }
+  .project-item {
+    flex-direction: row;
   }
 
-  .project-languages {
-    font-size: 18px;
-  }
-
-  .project-title {
-    font-size: 24px;
+  .project-item:nth-child(even) {
+    flex-direction: row-reverse;
   }
 
   .project-item {
-    height: 320px;
+    height: 400px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+  }
+
+  .project-info {
+    height: 100%;
   }
 
   .project-image {
-    height: 320px;
+    height: 100%;
   }
-  .project-item .project-info {
-    height: 320px;
-    justify-content: space-around;
-  }
-
-  .barber-item {
+  /* ? About Me Styling */
+  .about {
     flex-direction: row;
+    align-items: center;
   }
 
-  .todo-item {
-    flex-direction: row-reverse;
+  .col-left {
+    flex-basis: 50%;
+    width: 600px;
+    height: 500px;
+    padding-left: 60px;
   }
 
-  .sov-item {
-    flex-direction: row;
+  .col-right {
+    text-align: left;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
   }
 
-  .pm-item {
-    flex-direction: row-reverse;
+  .col-right h1 {
+    width: 100%;
+    text-align: left;
   }
 
-  .commission-item {
-    flex-direction: row;
+  .col-right h2 {
+    font-size: 24px;
   }
 
-  .flooding-item {
-    flex-direction: row;
+  .col-right p {
+    font-size: 22px;
+    line-height: 4.5rem;
+  }
+  .col-right .portfolio-button {
+    width: 200px;
+    align-self: center;
+  }
+
+  /* ? Contact Me Styling */
+  form {
+    padding: 10px;
+    width: 70%;
+  }
+
+  .subscribe {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  label {
+    font-size: 16px;
+  }
+
+  #contact-submit {
+    width: 250px;
+    height: 6rem;
   }
 }

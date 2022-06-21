@@ -477,6 +477,10 @@ textarea {
   line-height: 1.5;
 }
 
+.contact-info h3 {
+  font-weight: 300;
+}
+
 /* ? Start Footer Styling */
 footer {
   margin-top: 20px;
@@ -647,5 +651,27 @@ footer p {
   #contact-submit {
     width: 250px;
     height: 6rem;
+  }
+
+  /* ? Contact Information Styling */
+  .contact-items {
+    width: 80%;
+    max-width: 1200px;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .contact-item {
+    width: 28%;
+    height: 40%;
+  }
+
+  .contact-info h2 {
+    font-size: 20px;
+  }
+
+  .contact-info h3 {
+    font-size: 18px;
+    /* font-weight: 300; */
   }
 }

@@ -589,11 +589,26 @@ footer p {
 
   .project-info {
     height: 100%;
+    display: flex;
+    justify-content: space-around;
   }
 
+  .project-title {
+    font-size: 28px;
+  }
+
+  .project-languages {
+    font-size: 20px;
+  }
+
+  .project-description {
+    font-size: 18px;
+    line-height: 3.5rem;
+  }
   .project-image {
     height: 100%;
   }
+
   /* ? About Me Styling */
   .about {
     flex-direction: row;

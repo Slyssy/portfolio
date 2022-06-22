@@ -246,12 +246,16 @@ label[for='input-color-picker'] {
 
 /* ? Project Section Styling */
 .projects {
+  height: 100vh;
   flex-direction: column;
   text-align: center;
   max-width: 1500px;
   margin: 0 auto;
   justify-content: space-around;
   text-align: center;
+  overflow: scroll;
+  /* overflow-y: hidden; */
+  /* margin-bottom: 70px; */
 }
 
 .projects-header {
@@ -322,29 +326,38 @@ label[for='input-color-picker'] {
 
 /* ? About Section Styling */
 .about {
+  height: 100vh;
   display: flex;
   flex-direction: column-reverse;
+  justify-content: space-around;
   align-items: center;
   max-width: 1200px;
   text-align: center;
   margin: 0 auto;
-  padding: 100px 20px;
 }
 .col-left {
-  width: 250px;
-  height: 360px;
+  width: 80%;
+  height: 40%;
 }
 
 .col-right {
-  width: 100%;
+  width: 90%;
+  height: 40%;
+}
+
+.col-right p {
+  font-size: 12px;
+  line-height: 2rem;
 }
 
 .col-right h2 {
   letter-spacing: 0.5rem;
   margin-bottom: 10px;
 }
+
 .about-img {
-  width: 100%;
+  height: 100%;
+  object-fit: cover;
   position: relative;
   z-index: 1;
 }
@@ -484,13 +497,17 @@ textarea {
 /* ? Start Footer Styling */
 footer {
   margin-top: 20px;
-  height: 25%;
+  height: 20%;
+  width: 100%;
+  /* margin-bottom: 25px; */
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
   padding: 16px;
+  /* border: 2px solid var(--primary-theme-color);
+  border-radius: 15px; */
 }
 
 footer .section-title {
@@ -498,13 +515,11 @@ footer .section-title {
   font-size: 28px;
 }
 
-footer h3 {
-  color: white;
-}
-
 footer p {
   color: white;
   font-weight: 300;
+  font-size: 10px;
+  line-height: 1rem;
 }
 .social-links {
   width: 70%;
@@ -617,12 +632,13 @@ footer p {
 
   .col-left {
     flex-basis: 50%;
-    width: 600px;
-    height: 500px;
+    height: 80%;
     padding-left: 60px;
   }
 
   .col-right {
+    flex-basis: 50%;
+    height: 80%;
     text-align: left;
     padding: 30px;
     display: flex;
@@ -677,10 +693,14 @@ footer p {
   }
 
   .contact-item {
-    width: 28%;
+    width: 30%;
     height: 40%;
+    padding: 20px;
   }
 
+  .contact-icon {
+    width: 20%;
+  }
   .contact-info h2 {
     font-size: 20px;
   }
@@ -689,4 +709,22 @@ footer p {
     font-size: 18px;
     /* font-weight: 300; */
   }
+
+  /* ? Footer Styling */
+  .footer-paragraph {
+    display: flex;
+    gap: 4px;
+    font-size: 14px;
+  }
+
+  .social-links {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+}
+/* # Media Query for Tablets */
+@media only screen and (min-width: 1200px) {
 }

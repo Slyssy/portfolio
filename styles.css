@@ -404,8 +404,6 @@ label[for='input-color-picker'] {
 }
 
 /* ? Project Section Styling */
-.projects {
-}
 
 .projects {
   height: 100vh;
@@ -704,6 +702,12 @@ footer p {
 
 .social-links img {
   width: 30%;
+}
+
+.footer-paragraph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 /* ? Keyframe Animations */
 /* .animate {

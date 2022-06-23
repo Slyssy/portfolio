@@ -1,3 +1,6 @@
+const hamburger = document.querySelector('.hamburger');
+const mobileMenu = document.querySelector('.nav-list');
+const header = document.querySelector('.header');
 const themeSwitchers = document.querySelectorAll('span');
 const dynamicInputs = document.querySelectorAll('input.input-color-picker');
 const landingH1s = document.querySelectorAll('#hero h1 span');
@@ -26,3 +29,9 @@ dynamicInputs.forEach((item) => {
 // const triggerAnimations = function () {
 //   landingH1s.forEach((h1) => h1.classList.toggle('animate'));
 // };
+
+// * Hamburger Menu Event Listener
+hamburger.addEventListener('click', () => {
+  hamburger.classList.toggle('active');
+  mobileMenu.classList.toggle('active');
+});

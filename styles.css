@@ -89,23 +89,27 @@ nav {
 }
 
 .brand {
-  flex-basis: 40%;
+  flex-basis: 60%;
 }
 
 .brand h1 {
   color: white;
-  font-size: 16px;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .nav-list-container {
-  flex-basis: 60%;
+  flex-basis: 40%;
+  display: flex;
+  justify-content: flex-end;
+  padding: 10px;
 }
 .nav-list {
   position: absolute;
   background-color: #29323c;
   width: 100vw;
   height: 100vh;
-  left: 0;
+  left: 100%;
   top: 0;
   display: flex;
   flex-direction: column;
@@ -113,6 +117,11 @@ nav {
   align-items: center;
   z-index: 1;
   overflow-x: hidden;
+  transition: left 0.5s ease;
+}
+
+.nav-list.active {
+  left: 0;
 }
 
 .nav-list a {
@@ -123,8 +132,12 @@ nav {
   text-transform: uppercase;
   padding: 20px;
   display: block;
+  transition: color 0.3s ease;
 }
 
+.nav-list a:hover {
+  color: var(--primary-theme-color);
+}
 .nav-list a::after {
   content: attr(data-after);
   position: absolute;
@@ -142,6 +155,66 @@ nav {
 .nav-list li:hover a::after {
   transform: translate(-50%, -50%) scale(1);
   letter-spacing: initial;
+}
+
+.hamburger {
+  height: 60px;
+  width: 60px;
+  border: 3px solid white;
+  border-radius: 50%;
+  position: relative;
+  justify-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  cursor: pointer;
+  transform: scale(0.6);
+}
+
+.hamburger::after {
+  position: absolute;
+  content: '';
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  border: 3px solid var(--primary-theme-color);
+  animation: hamburger_pulse 0.75s ease infinite;
+}
+
+.bar {
+  height: 2px;
+  width: 30px;
+  position: relative;
+  background-color: white;
+  z-index: -1;
+}
+
+.bar::after,
+.bar::before {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  background-color: white;
+  transition: 0.3s ease;
+  transition-property: top, bottom;
+}
+
+.bar::after {
+  top: 8px;
+}
+
+.bar::before {
+  bottom: 8px;
+}
+
+.hamburger.active .bar::before {
+  bottom: 0;
+}
+.hamburger.active .bar::after {
+  top: 0;
 }
 /* ?Hero Section Styling */
 #hero {
@@ -524,7 +597,7 @@ textarea {
 }
 
 /* ? Start Contact Information Styling */
-.contact-information {
+#contact-information {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -626,6 +699,17 @@ footer p {
   animation: reveal-text 0.5s ease forwards;
   animation: reveal-name 0.5s ease forwards;
 } */
+
+@keyframes hamburger_pulse {
+  0% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.5);
+  }
+}
 @keyframes show-text {
   50% {
     width: 100%;

@@ -1,7 +1,7 @@
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.nav-list');
 const header = document.querySelector('.header');
-// const navLinks = document.querySelector('.nav-list ');
+const navLink = document.querySelectorAll('.nav-link ');
 // console.log(navLinks);
 const themeSwitchers = document.querySelectorAll('span');
 const dynamicInputs = document.querySelectorAll('input.input-color-picker');
@@ -38,14 +38,19 @@ hamburger.addEventListener('click', () => {
   mobileMenu.classList.toggle('active');
 });
 
-//% Smooth Scroll Function
-mobileMenu.addEventListener('click', function (e) {
-  e.preventDefault();
-  console.log(e.target);
-  if (e.target.classList.contains('nav-link')) {
-    const destinationID = e.target.getAttribute('href');
-    document
-      .querySelector(destinationID)
-      .scrollIntoView({ behavior: 'smooth' });
+//* Change Header Background Color on Scroll
+document.addEventListener('scroll', () => {
+  let scrollPosition = window.scrollY;
+  if (scrollPosition > 250) {
+    header.style.backgroundColor = '#1f1e1e96';
+  } else {
+    header.style.backgroundColor = 'transparent';
   }
+});
+
+navLink.forEach((link) => {
+  link.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobileMenu.classList.toggle('active');
+  });
 });

@@ -21,6 +21,7 @@ li {
 html {
   font-size: 10px;
   font-family: 'Montserrat', sans-serif;
+  scroll-behavior: smooth;
 }
 
 img {
@@ -75,9 +76,10 @@ header {
 
 .header {
   min-height: 8vh;
-  background-color: rgba(31, 30, 30, 0.24);
+  background-color: #1f1e1e96;
   display: flex;
   align-items: center;
+  transition: background-color 0.3s ease;
 }
 
 nav {
@@ -751,6 +753,19 @@ footer p {
     font-size: 5rem;
   }
 
+  .brand {
+    flex-basis: 50%;
+    padding-left: 2.5%;
+  }
+
+  .brand h1 {
+    font-size: 28px;
+  }
+
+  .brand .section-title {
+    text-align: left;
+  }
+
   /* ? Project Section Styling */
   .all-projects {
     gap: 0;
@@ -900,6 +915,7 @@ footer p {
   }
 
   .header {
+    /* background-color: transparent; */
     width: 100%;
     margin: 0 auto;
   }
@@ -909,7 +925,7 @@ footer p {
     justify-content: space-around;
   }
 
-  .brand {
+  /* .brand {
     flex-basis: 30%;
     padding-left: 2%;
   }
@@ -920,10 +936,10 @@ footer p {
 
   .brand .section-title {
     text-align: left;
-  }
+  } */
 
   .nav-list-container {
-    flex-basis: 60%;
+    flex-basis: 75%;
   }
 
   .nav-list {
@@ -936,7 +952,7 @@ footer p {
   }
 
   .nav-list a {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     transition: all 0.3s ease;
   }
 
@@ -950,5 +966,17 @@ footer p {
 
   .nav-list a::after {
     display: none;
+  }
+
+  .projects {
+    padding-top: 50px;
+  }
+
+  #contact {
+    padding-top: 50px;
+  }
+
+  #contact-information {
+    padding-top: 100px;
   }
 }

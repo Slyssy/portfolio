@@ -405,6 +405,9 @@ label[for='input-color-picker'] {
 
 /* ? Project Section Styling */
 .projects {
+}
+
+.projects {
   height: 100vh;
   flex-direction: column;
   text-align: center;
@@ -413,6 +416,7 @@ label[for='input-color-picker'] {
   justify-content: space-around;
   text-align: center;
   overflow: scroll;
+  padding-top: 50px;
   /* overflow-y: hidden; */
   /* margin-bottom: 70px; */
 }
@@ -484,6 +488,10 @@ label[for='input-color-picker'] {
 }
 
 /* ? About Section Styling */
+#about {
+  padding-top: 50px;
+}
+
 .about {
   height: 100vh;
   display: flex;
@@ -543,6 +551,7 @@ label[for='input-color-picker'] {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding-top: 65px;
 }
 form {
   flex-basis: 80%;
@@ -605,6 +614,7 @@ textarea {
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
+  padding-top: 80px;
 }
 
 .contact-items {
@@ -618,7 +628,7 @@ textarea {
 .contact-item {
   display: flex;
   width: 50%;
-  height: 130px;
+  height: 30%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -868,8 +878,11 @@ footer p {
   }
 
   /* ? Contact Information Styling */
+  #contact-information {
+    padding-top: 90px;
+  }
   .contact-items {
-    width: 80%;
+    width: 90%;
     max-width: 1200px;
     flex-direction: row;
     justify-content: space-between;
@@ -889,7 +902,7 @@ footer p {
   }
 
   .contact-info h3 {
-    font-size: 18px;
+    font-size: 14px;
     /* font-weight: 300; */
   }
 
@@ -968,7 +981,7 @@ footer p {
     display: none;
   }
 
-  .projects {
+  /* .projects {
     padding-top: 50px;
   }
 
@@ -978,5 +991,5 @@ footer p {
 
   #contact-information {
     padding-top: 100px;
-  }
+  } */
 }

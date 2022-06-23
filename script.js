@@ -1,6 +1,8 @@
 const hamburger = document.querySelector('.hamburger');
 const mobileMenu = document.querySelector('.nav-list');
 const header = document.querySelector('.header');
+// const navLinks = document.querySelector('.nav-list ');
+// console.log(navLinks);
 const themeSwitchers = document.querySelectorAll('span');
 const dynamicInputs = document.querySelectorAll('input.input-color-picker');
 const landingH1s = document.querySelectorAll('#hero h1 span');
@@ -34,4 +36,16 @@ dynamicInputs.forEach((item) => {
 hamburger.addEventListener('click', () => {
   hamburger.classList.toggle('active');
   mobileMenu.classList.toggle('active');
+});
+
+//% Smooth Scroll Function
+mobileMenu.addEventListener('click', function (e) {
+  e.preventDefault();
+  console.log(e.target);
+  if (e.target.classList.contains('nav-link')) {
+    const destinationID = e.target.getAttribute('href');
+    document
+      .querySelector(destinationID)
+      .scrollIntoView({ behavior: 'smooth' });
+  }
 });

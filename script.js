@@ -7,6 +7,8 @@ const themeSwitchers = document.querySelectorAll('span');
 const dynamicInputs = document.querySelectorAll('input.input-color-picker');
 const landingH1s = document.querySelectorAll('#hero h1 span');
 console.log(landingH1s);
+
+//* Function to handle the theme color selector
 const handleThemeUpdate = (cssVars) => {
   const root = document.querySelector(':root');
   const keys = Object.keys(cssVars);
@@ -17,6 +19,8 @@ const handleThemeUpdate = (cssVars) => {
   });
 };
 
+//* Looping through the inputs provided from the color selector to set the
+//* primary color variable.
 dynamicInputs.forEach((item) => {
   item.addEventListener('input', (e) => {
     const cssPropName = `--primary-${e.target.getAttribute('data-id')}`;
@@ -53,4 +57,25 @@ navLink.forEach((link) => {
     hamburger.classList.toggle('active');
     mobileMenu.classList.toggle('active');
   });
+});
+
+// * Open an closing the resume modal
+const modalContainer = document.querySelector('#modal-container');
+const closeButton = document.querySelector('.close-modal');
+const closeIcon = document.querySelector('.close-icon');
+const resumeButton = document.querySelector('.resume-button');
+
+resumeButton.addEventListener('click', (event) => {
+  modalContainer.classList.add('show');
+  header.classList.add('hide');
+});
+
+//* Adding event listenters to close modal.
+closeButton.addEventListener('click', (event) => {
+  modalContainer.classList.remove('show');
+  header.classList.remove('hide');
+});
+closeIcon.addEventListener('click', (event) => {
+  modalContainer.classList.remove('show');
+  header.classList.remove('hide');
 });

@@ -809,6 +809,19 @@ hr {
   font-family: 'Alegreya Sans SC', sans-serif;
   font-size: 1.3rem;
 }
+
+/* ? Thank you Page Styling */
+.thank-you {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('./images/project-images/thanks.png');
+  background-position: center;
+  background-size: cover;
+}
+
 /* ? Keyframe Animations */
 /* .animate {
   animation: show-text 1s ease;

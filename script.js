@@ -6,6 +6,8 @@ const navLink = document.querySelectorAll('.nav-link ');
 const themeSwitchers = document.querySelectorAll('span');
 const dynamicInputs = document.querySelectorAll('input.input-color-picker');
 const landingH1s = document.querySelectorAll('#hero h1 span');
+const heroH1s = document.querySelectorAll('#hero h1');
+const heroName = document.querySelector('#hero h1:nth-child(3)');
 console.log(landingH1s);
 
 //* Function to handle the theme color selector
@@ -29,12 +31,22 @@ dynamicInputs.forEach((item) => {
     handleThemeUpdate({
       [cssPropName]: e.target.value,
     });
+    triggerAnimations();
   });
 });
 
-// const triggerAnimations = function () {
-//   landingH1s.forEach((h1) => h1.classList.toggle('animate'));
-// };
+const triggerAnimations = function () {
+  console.log('triggered');
+  landingH1s.forEach((h1) => {
+    h1.classList.toggle('activate-show-text');
+  });
+
+  heroH1s.forEach((h1) => {
+    h1.classList.toggle('activate-reveal-text');
+  });
+
+  heroName.classList.toggle('activate-reveal-name');
+};
 
 // * Hamburger Menu Event Listener
 hamburger.addEventListener('click', () => {

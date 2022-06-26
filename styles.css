@@ -339,71 +339,6 @@ label[for='input-color-picker'] {
   font-size: 20px;
 }
 
-/* ? Services Section Styling */
-.services {
-  flex-direction: column;
-  text-align: center;
-  max-width: 1500px;
-  margin: 0 auto;
-  justify-content: space-around;
-  text-align: center;
-}
-
-.service-bottom {
-  height: 70%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  align-items: center;
-  gap: 20px;
-}
-
-.service-item {
-  flex-basis: 80%;
-  /* height: 180px; */
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  flex-direction: column;
-  padding: 20px;
-  background-image: url('./images/img-1.png');
-  background-size: cover;
-  border-radius: 10px;
-  position: relative;
-  z-index: 1;
-}
-
-.service-item::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-image: linear-gradient(60deg, #29323c, #485563 100%);
-  opacity: 0.8;
-  border-radius: 10px;
-  z-index: -1;
-}
-
-.service-item h2 {
-  color: var(--primary-theme-color);
-  font-size: 2rem;
-  text-transform: uppercase;
-  margin-bottom: 15px;
-  font-weight: 700;
-}
-
-.service-item p {
-  color: white;
-  text-align: left;
-}
-.service-item .icon {
-  height: 50px;
-  width: 50px;
-  margin-bottom: 20px;
-}
-
 /* ? Project Section Styling */
 
 .projects {
@@ -911,10 +846,18 @@ hr {
   }
 }
 
+#hero h1 span.activate-show-text {
+  animation: show-text 1s ease;
+}
+
 @keyframes reveal-text {
   100% {
     color: white;
   }
+}
+
+#hero h1.activate-reveal-text {
+  animation: reveal-text 0.5s ease forwards;
 }
 
 @keyframes reveal-name {
@@ -922,6 +865,10 @@ hr {
     color: var(--primary-theme-color);
     font-weight: 700;
   }
+}
+
+#hero h1:nth-child(3).activate-reveal-name {
+  animation: reveal-name 0.5s ease forwards;
 }
 
 /* # Media Query for Tablets */

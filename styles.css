@@ -352,7 +352,6 @@ label[for='input-color-picker'] {
   overflow: scroll;
   padding-top: 50px;
   /* overflow-y: hidden; */
-  /* margin-bottom: 70px; */
 }
 
 .projects-header {
@@ -916,7 +915,7 @@ hr {
 
   /* ? Project Section Styling */
   .all-projects {
-    gap: 0;
+    gap: 2em;
   }
   .project-item {
     flex-direction: row;
